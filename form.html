@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="form.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+  <div class="container">
+    <div class="title">Book a Table</div>
+    <div class="content">
+      <form action="/confirm-booking" method="POST">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" placeholder="Enter your name" name="name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Members</span>
+            <input type="number" placeholder="Enter your visiting count" name="members" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email"  name="email"required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" name="mobile" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Book Now" href='/'>
+        </div>
+      </form>
+      <a href="/" style="text-decoration: none;">Go to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>

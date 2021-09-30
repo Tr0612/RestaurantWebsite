@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+
+            body,h1,h2,h3,h4,h5,h6 {
+                font-family: 'Big Shoulders Text', cursive;
+            }
+        </style>
+    </head>
+
+<body>
+    <div id="home" class="w3-content" style="max-width: 100%;">
+    <!-- Navbar (Sits on top) -->
+    <div class="w3-top w3-center w3-xlarge w3-black w3-opacity-min">
+        <a href="/" class="w3-bar-item w3-button">HOME</a>
+        <a href="/book" class="w3-bar-item w3-button">RESERVATION</a>
+        <a href="/#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="/#reservation" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+    
+    <!-- Header image -->
+    <div style="height:800px;background-image:url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1153&q=80');background-size:cover"
+    class="w3-display-container w3-grayscale-min">
+        <div class="w3-display-bottomleft">
+        <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+        </div>
+        <div class="w3-display-middle w3-center">
+        <span class="w3-text-white" style="font-size:100px">50%<br>Exciting Offer</span>
+        <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div id="menu" class="w3-container w3-black w3-xxlarge w3-padding-64">
+        <h1 class="w3-center w3-jumbo w3-padding-32">THE MENU</h1>
+            <div class="w3-row w3-center w3-border w3-border-dark-grey">
+            <a href="#pizza"><div class="w3-third w3-padding-large w3-red">Pizza</div></a>
+            <a href="#drinks"><div class="w3-third w3-padding-large w3-hover-red">Drinks</div></a>
+            <a href="#starters"><div class="w3-third w3-padding-large w3-hover-red">Starters</div></a>
+        </div>
+        <div id="pizza" class="w3-container w3-white w3-padding-32">
+            <% for(var i = 0; i < pizza.length; i++) { %>
+            <h1><b><%= pizza[i].title %></b><span class="w3-right w3-tag w3-dark-grey w3-round">₹<%= pizza[i].price %></span></h1>
+            <p class="w3-text-grey"><%= pizza[i].content %></p><hr>
+            <% } %>
+        </div>
+        <h1 id="drinks" class="w3-center w3-jumbo w3-padding-32">DRINKS</h1>
+        <div class="w3-container w3-white w3-padding-32">
+            <% for(var i = 0; i < drinks.length; i++) { %>
+                <h1><b><%= drinks[i].title %></b><span class="w3-right w3-tag w3-dark-grey w3-round">₹<%= drinks[i].price %></span></h1>
+                <p class="w3-text-grey"><%= drinks[i].content %></p><hr>
+                <% } %> 
+        </div>
+        <h1 id="starters" class="w3-center w3-jumbo w3-padding-32">STARTERS</h1>
+        <div class="w3-container w3-white w3-padding-32">
+            <% for(var i = 0; i < starters.length; i++) { %>
+                <h1><b><%= starters[i].title %></b><span class="w3-right w3-tag w3-dark-grey w3-round">₹<%= starters[i].price %></span></h1>
+                <p class="w3-text-grey"><%= starters[i].content %></p><hr>
+                <% } %> 
+        </div>
+    </div>
+
+    <!-- End Content -->
+    </div>
+</body>
+</html>
